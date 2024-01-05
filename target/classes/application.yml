@@ -1,0 +1,24 @@
+# https://doc.xiaominfo.com/knife4j
+knife4j:
+  # 开启增强配置
+  enable: true
+  # 是否开启生产环境屏蔽   true:关闭swagger，false:开启swagger
+  production: false
+  basic:
+    # 是否开启认证
+    enable: false
+    # Basic认证用户名
+    username: admin
+    # Basic认证密码
+    password: 123456
+spring:
+  servlet:
+    multipart:
+      max-file-size: 200MB
+      max-request-size: 200MB
+  application:
+    name: ocr
+  mvc:
+    pathmatch:
+      #Springfox使用的路径匹配是基于AntPathMatcher的，而Spring Boot 2.6.X使用的是PathPatternMatcher 解决knife4j匹配boot2.6.7 boot版本过高的问题
+      matching-strategy: ant_path_matcher
