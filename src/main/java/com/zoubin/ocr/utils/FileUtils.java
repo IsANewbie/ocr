@@ -9,7 +9,7 @@ import java.nio.file.Paths;
 public class FileUtils {
     public static void main(String[] args) {
         // 指定要遍历的文件夹路径
-        String folderPath = "/Users/zoubin/code_image";
+        String folderPath = "/Users/zoubin/APC/infra/constant";
 
         // 创建一个 File 对象，表示要遍历的文件夹
         File folder = new File(folderPath);

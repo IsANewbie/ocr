@@ -49,12 +49,12 @@ public class BaiduOcrUtils {
             for (Object o : wordsResult.toList()) {
                 HashMap<String, String> words = (HashMap<String, String>) o;
                 String str = words.get("words");
-                if (str.contains("class")) {
-                    isStart = true;
-                }
-                if (!isStart) {
-                    continue;
-                }
+//                if (str.contains("class")) {
+//                    isStart = true;
+//                }
+//                if (!isStart) {
+//                    continue;
+//                }
                 if (StringUtils.isNumeric(str)) {
                     continue;
                 }
@@ -63,7 +63,14 @@ public class BaiduOcrUtils {
                     continue;
                 }
 
-                if (str.contains("-202401")) {
+                if (str.contains("698-")) {
+                    continue;
+                }
+
+                if (str.contains("EX-")) {
+                    continue;
+                }
+                if (str.contains("-20")) {
                     continue;
                 }
                 stringBuilder.append(str).append("\n");
